@@ -139,6 +139,7 @@
     }
     body{
         background-image: url(../img/giphy\ \(10\).gif);
+	     background-size: contain;
     }
     #apresentacao button{
     animation-name: pisca;
