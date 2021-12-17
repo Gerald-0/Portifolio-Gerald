@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;800&display=swap');
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .faixa-effect{
@@ -38,6 +38,7 @@
 .texto button:hover{
     background-color: #4B28DE;
     transition: 1s;
+    cursor: pointer;
 }
 .texto a{
     color: #fff;
@@ -67,10 +68,18 @@
         background-position-x: 1500px;
     }
 }
+@keyframes pisca{
+    0%{ opacity: 0.2;}
+    50%{opacity: 1;}
+    100%{ opacity: 0.2;}
+}
 .sobre{
     color: #fff;
     text-align: center;
     margin-top: 50px;
+}
+#sobre{
+    color: #fff;
 }
 .info{
     color: #fff;
@@ -96,3 +105,57 @@
 .onda3{
     margin: -21% 0%;
 }
+
+@media screen and (max-width: 380px) {
+    #img-principal{  
+        display: none;
+    }
+    #apresentacao{
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+        background-image: linear-gradient(to right, #FA8BFF , #2BD2FF , #2BFF88);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        animation-name: degrade;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+    }
+    #sobre h1{
+        text-align: center;
+        text-transform: uppercase;
+        background-image: linear-gradient(to right, #FA8BFF , #2BD2FF , #2BFF88);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        animation-name: degrade;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+    }
+    #effect{
+        font-size: 10px;
+    }
+    body{
+        background-image: url(../img/giphy\ \(10\).gif);
+    }
+    #apresentacao button{
+    animation-name: pisca;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+    }
+    #nave{
+       font-size: 10px;
+    }
+    #logo{
+        display: none;
+    }
+    #card{
+	    margin: 5px;
+        gap: 40px;
+        
+    }
+}
+
